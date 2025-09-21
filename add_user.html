@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Usuário</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input { padding: 8px; width: 300px; }
+        button { padding: 10px 20px; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Adicionar Novo Usuário</h1>
+    
+    <form method="POST">
+        <div class="form-group">
+            <label>Nome:</label>
+            <input type="text" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Idade:</label>
+            <input type="number" name="age">
+        </div>
+        
+        <button type="submit">Salvar</button>
+        <a href="/">Cancelar</a>
+    </form>
+</body>
+</html>

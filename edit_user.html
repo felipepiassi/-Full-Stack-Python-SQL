@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Usuário</h1>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" value="{{ user[1] }}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="{{ user[2] }}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" value="{{ user[3] }}" min="0" max="150">
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Atualizar</button>
+                <a href="{{ url_for('index') }}" class="btn btn-cancel">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
