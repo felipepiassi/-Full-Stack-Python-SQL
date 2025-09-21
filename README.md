@@ -14,3 +14,9 @@ VS Code - IDE principal
 DB Browser for SQLite - Visualização de dados
 Git - Controle de versão
 Command Prompt - Linha de comando.
+Pasta raiz com os arquivos: app.PY e database.py
+Execute o arquivo APP.PY
+PASTA templates - ADD : add-user e edit_user e index
+PASTA static - add : static-style
+acesso a web : http://localhost:5000
+Bancos de Bados : http://localhost:5000/debug-db
